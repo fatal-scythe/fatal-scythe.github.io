@@ -24,7 +24,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/2021/01/23/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%99%EF%BC%8C%E6%8C%82%E5%9C%A8Github%E4%B8%8A/%E5%B0%81%E9%9D%A2.jpg">
 <meta property="article:published_time" content="2021-01-22T16:24:32.000Z">
-<meta property="article:modified_time" content="2021-03-14T08:24:53.779Z">
+<meta property="article:modified_time" content="2021-03-15T01:40:27.380Z">
 <meta property="article:author" content="无星之夜的咏叹调">
 <meta property="article:tag" content="建站">
 <meta name="twitter:card" content="summary">
@@ -86,7 +86,7 @@
                                     
                                 
                                     
-                                        <li><a href="/oldsite/"><i class="fa fa-link"></i>原网站入口</a></li>
+                                        <li><a href="/oldsite/"><i class="fa fa-link"></i>原始网站</a></li>
                                     
                                 
                             </ul>
@@ -137,7 +137,7 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1615710293779"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1615772427380"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
@@ -148,16 +148,16 @@
 <h2 id="3、SSH免密自动登录、theme选择"><a href="#3、SSH免密自动登录、theme选择" class="headerlink" title="3、SSH免密自动登录、theme选择"></a>3、SSH免密自动登录、theme选择</h2><p>&emsp;&emsp;为了简化开发流程，不用每次部署的时候都要登录github，SSH免密登录是很有必要的。然后就一直百度吧，遇到各种bug，终于还是弄好了…<br>&emsp;&emsp;然后在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo的官方主题</a>里面选了一款不错的主题 <strong><em>Kartos</em></strong>，接下来的就是优化界面了~</p>
 <hr>
 <h2 id="4、总结一下基本开发流程"><a href="#4、总结一下基本开发流程" class="headerlink" title="4、总结一下基本开发流程"></a>4、总结一下基本开发流程</h2><p>&emsp;&emsp;使用hexo开发基本就用到这四个语句：</p>
-<pre><code> hexo new &lt;blogName&gt;   # 新建一篇博客
- hexo clean            # 清除hexo g生成的public文件夹
- hexo g                # generate，把博客的md文件按照主题生成html文件
- hexo d                # 一件部署至github pages!</code></pre>
+<pre><code>hexo new &lt;blogName&gt;   # 新建一篇博客  
+hexo clean            # 清除hexo g生成的public文件夹  
+hexo g                # generate，把博客的md文件按照主题生成html文件  
+hexo d                # 一件部署至github pages!</code></pre>
 <p>&emsp;&emsp;首先 <code>hexo new &lt;blogName&gt;</code> 新建博客，这步会创建blogName.md文件，接下来编辑这个文件。（尝试着写了这一篇，感觉还行）<br>&emsp;&emsp;然后再把上面剩下的3句挨个运行遍，完事~( <code>hexo clean</code> 看自己需求)  </p>
 <hr>
 <h2 id="5、时隔两个月、移植以前的网站"><a href="#5、时隔两个月、移植以前的网站" class="headerlink" title="5、时隔两个月、移植以前的网站"></a>5、时隔两个月、移植以前的网站</h2><p>&emsp;&emsp;今天是2021.3.14，昨天hcj又问我要X锐格网址，emmmm。说好把以前的网站移植过来，鸽了接近2个月，好吧，今天就搞。<br>&emsp;&emsp;首先将原来的所有东西一股脑放 博客根目录/source/oldsite文件夹内，与_posts同级。并将里面的图片全部压缩（我真的已经注意到背景图片加载很慢的问题了），删除无用的视频、音频，一些基于php和Python的服务也全部删除（但首页的链接保留了！还可以怀念！）<br>&emsp;&emsp;<code>hexo g</code> 是将.md文件按照主题的配置，把js、css渲染进同一个html文件内，所以我以前写好的html、css、js是没有必要进行渲染的。然后打开在博客的根目录下 <strong><em>_config.yml</em></strong> 的配置文件，在配置文件中给skip_render字段添加不渲染的文件夹。</p>
 <pre><code>skip_render:
  - &quot;oldsite/**&quot;</code></pre>
-<p>&emsp;&emsp;<strong>友情提醒：原网站入口在首页的最上方“原网站入口”</strong>，小伙伴里可能有你认识的小伙伴…</p>
+<p>&emsp;&emsp;<strong>友情提醒：原网站入口在首页的最上方“原始网站”</strong>，小伙伴里可能有你认识的小伙伴…</p>
 <hr>
 <h2 id="6、没想到还有6"><a href="#6、没想到还有6" class="headerlink" title="6、没想到还有6"></a>6、没想到还有6</h2><p>&emsp;&emsp;应该没有别的要说了，最后…下面有打赏按钮，大家可以帮忙试一下好不好用哦~ (*^▽^*)</p>
 
@@ -251,7 +251,7 @@
                         <a class="tag-none-link" href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag">建站</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-03-14</span>
+                    <span>最后编辑：2021-03-15</span>
                     </div>
                 </div>
             </footer>
