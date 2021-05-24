@@ -24,7 +24,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/2021/05/24/NFC%E5%90%8D%E7%89%87/%E5%B0%81%E9%9D%A2.jpg">
 <meta property="article:published_time" content="2021-05-24T05:00:46.000Z">
-<meta property="article:modified_time" content="2021-05-24T14:17:56.368Z">
+<meta property="article:modified_time" content="2021-05-24T14:32:53.191Z">
 <meta property="article:author" content="无星之夜的咏叹调">
 <meta property="article:tag" content="电子设计">
 <meta property="article:tag" content="成功实现">
@@ -127,7 +127,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~1.82K
+                            ~1.86K
                         
                         字
                         
@@ -138,26 +138,43 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1621865876368"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1621866773191"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
                 <h1 id="NFC名片的一小步，我技术进步的一大步"><a href="#NFC名片的一小步，我技术进步的一大步" class="headerlink" title="NFC名片的一小步，我技术进步的一大步"></a>NFC名片的一小步，我技术进步的一大步</h1><p><em>&emsp;&emsp;原域名 iloveasuna.cn不再使用，域名更改为 cyberbrain.top（电子脑）</em><br><em>&emsp;&emsp;新域名新起点！</em></p>
 <hr>
-<h2 id="1、回忆：惊喜、幻想和准备"><a href="#1、回忆：惊喜、幻想和准备" class="headerlink" title="1、回忆：惊喜、幻想和准备"></a>1、回忆：惊喜、幻想和准备</h2><p>&emsp;&emsp;5月10日一次偶然的水群（忘了是“全国大学生电子设计竞赛交流群”还是立创EDA的“2021国赛助力群”），我看到有人在发 <a target="_blank" rel="noopener" href="https://oshwhub.com/scarrr0725/ji-yu-nfcde-ming-pian-ji-ji-yu-a">[已成功] 基于nfc的PCB名片</a> 看了一下，觉得很好玩。<br>&emsp;&emsp;做个NFC名片，既有普通名片的功能，还可以拿手机一贴就添加联系人，更能让对方记住你，岂不美哉？稍微改一下，还可以做成表白小卡片，场景自动化标签，甚至模拟饭卡交通卡…唔，想想就觉得有意思hhhh<br>&emsp;&emsp;查了一些资料，看到了疑似<a target="_blank" rel="noopener" href="https://www.instructables.com/PCB-Business-Card-With-NFC/">该NFC名片的最初设计</a>，很详细，很英文，很难读很快…<br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/businesscard.jpg" alt="Business Card"><br>还仔细查看了NFC名片的核心部件——射频卡芯片NT3H1101W0FHKH的芯片手册，这是一个NTAG I2C - Energy harvesting NFC Forum Type 2 Tag with<br>field detection pin and I2C interface…emmm也就是这个芯片可以通过IIC通信，也可以通过RF通信；还可以从RF中获取能量从Vout引脚发出…</p>
+<h2 id="1、回忆：惊喜、幻想和准备"><a href="#1、回忆：惊喜、幻想和准备" class="headerlink" title="1、回忆：惊喜、幻想和准备"></a>1、回忆：惊喜、幻想和准备</h2><p>&emsp;&emsp;5月10日一次偶然的水群（忘了是“全国大学生电子设计竞赛交流群”还是立创EDA的“2021国赛助力群”），我看到有人在发 <a target="_blank" rel="noopener" href="https://oshwhub.com/scarrr0725/ji-yu-nfcde-ming-pian-ji-ji-yu-a">[已成功] 基于nfc的PCB名片</a> 看了一下，觉得很好玩。<br>&emsp;&emsp;做个NFC名片，既有普通名片的功能，还可以拿手机一贴就添加联系人，更能让对方记住你，岂不美哉？稍微改一下，还可以做成表白小卡片，场景自动化标签，甚至模拟饭卡交通卡…唔，想想就觉得有意思hhhh<br>&emsp;&emsp;查了一些资料，看到了疑似<a target="_blank" rel="noopener" href="https://www.instructables.com/PCB-Business-Card-With-NFC/">该NFC名片的最初设计</a>，很详细，很英文，很难读很快…</p>
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/businesscard.jpg" class title="Business Card">  
+<p>还仔细查看了NFC名片的核心部件——射频卡芯片NT3H1101W0FHKH的芯片手册，这是一个NTAG I2C - Energy harvesting NFC Forum Type 2 Tag with<br>field detection pin and I2C interface…emmm也就是这个芯片可以通过IIC通信，也可以通过RF通信；还可以从RF中获取能量从Vout引脚发出…</p>
 <hr>
 <h2 id="2、设计：克隆工程并编辑"><a href="#2、设计：克隆工程并编辑" class="headerlink" title="2、设计：克隆工程并编辑"></a>2、设计：克隆工程并编辑</h2><p>&emsp;&emsp;在OSHW Hub上的开源工程可以直接克隆到我的立创EDA编辑器（国产之光！）（另，第一次用立创EDA应该是上一个项目“航顺HK32开发板设计”，但迟迟没时间去调试就没有上传到博客）<br>&emsp;&emsp;原始工程已经比较完善，我主要做了以下修改</p>
 <ul>
 <li>丝印：当然是无星之夜的咏叹调了！  </li>
-<li>元件的封装和位置，当时我觉得焊0402的电容是真的顶…LED的位置应该在灯泡图案接近“钨丝”的地方更合适<br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/sch.jpg" alt="原理图"><br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/pcb.jpg" alt="PCB">  </li>
+<li>元件的封装和位置，当时我觉得焊0402的电容是真的顶…LED的位置应该在灯泡图案接近“钨丝”的地方更合适  <img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/sch.jpg" class title="原理图">  
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/pcb.jpg" class title="PCB">  
+
+
+</li>
 </ul>
 <p>&emsp;&emsp;经过我做出实物后，复盘后修改过的工程地址：<a target="_blank" rel="noopener" href="https://oshwhub.com/Aincrad/ji-yu-nfcde-ming-pian-ji-ji-yu-a">OSHW开源平台</a></p>
 <hr>
-<h2 id="3、PCB打样，元器件购买"><a href="#3、PCB打样，元器件购买" class="headerlink" title="3、PCB打样，元器件购买"></a>3、PCB打样，元器件购买</h2><p>&emsp;&emsp;嘉立创PCB打样，5块钱包邮！强烈推荐。<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/pcb%E6%89%93%E6%A0%B7.jpg" alt="嘉立创"><br>&emsp;&emsp;贴片电阻、贴片电容、贴片LED，嗯，实验室都有…嘿嘿~然后就是这个NFC芯片 <a target="_blank" rel="noopener" href="https://item.szlcsc.com/74269.html">NT3H1101W0FHKH</a> 了，购买10个+时，单价2.83，为了用刚刚才领的国赛队伍30减30助力券（别告诉我队友…）硬是买了11个芯片… <img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/nfc%E8%8A%AF%E7%89%87.jpg" alt="nfc芯片"><br>&emsp;&emsp; 一切准备就绪，就等快递打我电话了┗( ▔, ▔ )┛</p>
+<h2 id="3、PCB打样，元器件购买"><a href="#3、PCB打样，元器件购买" class="headerlink" title="3、PCB打样，元器件购买"></a>3、PCB打样，元器件购买</h2><p>&emsp;&emsp;嘉立创PCB打样，5块钱包邮！强烈推荐。  </p>
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/pcb%E6%89%93%E6%A0%B7.jpg" class title="嘉立创">  
+<p>&emsp;&emsp;贴片电阻、贴片电容、贴片LED，嗯，实验室都有…嘿嘿~然后就是这个NFC芯片 <a target="_blank" rel="noopener" href="https://item.szlcsc.com/74269.html">NT3H1101W0FHKH</a> 了，购买10个+时，单价2.83，为了用刚刚才领的国赛队伍30减30助力券（别告诉我队友…）硬是买了11个芯片… </p>
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/nfc%E8%8A%AF%E7%89%87.jpg" class title="nfc芯片">
+<p>&emsp;&emsp; 一切准备就绪，就等快递打我电话了┗( ▔, ▔ )┛</p>
 <hr>
-<h2 id="4、焊接：热风枪初体验"><a href="#4、焊接：热风枪初体验" class="headerlink" title="4、焊接：热风枪初体验"></a>4、焊接：热风枪初体验</h2><p>&emsp;&emsp;芯片一到货，兴致勃勃拆开，一看，傻眼了。<br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/nfc%E8%8A%AF%E7%89%87%E5%AE%9E%E7%89%A9.jpg" alt="nfc芯片实物"><br>这芯片9个焊点，2mm*2mm大小，还是XQFN8的封装。我之前焊HK32芯片都焊得我想再也不碰电烙铁，自闭了几天…这可咋整。<br>&emsp;&emsp;求助老师！老师二话不说拿起热风枪呼呼两下，哎呀，焊上了。后面我自己焊了4块，好家伙，热风枪这么强吗…<br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/%E7%83%AD%E9%A3%8E%E6%9E%AA.jpg" alt="热风枪真容"><br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/%E5%B1%80%E9%83%A8%E6%94%BE%E5%A4%A7.jpg" alt="芯片焊接细节"><br>&emsp;&emsp;芯片焊好之后就是LED、电阻、电容了，这些都是比较简单。</p>
+<h2 id="4、焊接：热风枪初体验"><a href="#4、焊接：热风枪初体验" class="headerlink" title="4、焊接：热风枪初体验"></a>4、焊接：热风枪初体验</h2><p>&emsp;&emsp;芯片一到货，兴致勃勃拆开，一看，傻眼了。</p>
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/nfc%E8%8A%AF%E7%89%87%E5%AE%9E%E7%89%A9.jpg" class title="nfc芯片实物">  
+<p>这芯片9个焊点，2mm*2mm大小，还是XQFN8的封装。我之前焊HK32芯片都焊得我想再也不碰电烙铁，自闭了几天…这可咋整。<br>&emsp;&emsp;求助老师！老师二话不说拿起热风枪呼呼两下，哎呀，焊上了。后面我自己焊了4块，好家伙，热风枪这么强吗…</p>
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/%E7%83%AD%E9%A3%8E%E6%9E%AA.jpg" class title="热风枪真容">  
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/%E5%B1%80%E9%83%A8%E6%94%BE%E5%A4%A7.jpg" class title="芯片焊接细节">  
+<p>&emsp;&emsp;芯片焊好之后就是LED、电阻、电容了，这些都是比较简单。</p>
 <hr>
-<h2 id="5、调试：80-的绝望"><a href="#5、调试：80-的绝望" class="headerlink" title="5、调试：80%的绝望"></a>5、调试：80%的绝望</h2><p>&emsp;&emsp;焊好的第一块板子，调了一晚上不成。一接触到手机的NFC区域，指示灯闪一下即熄灭，查阅了芯片手册、网上教程、问答均无果。<br>&emsp;&emsp;当我绝望的拿着NFC名片摆弄时，惊奇的发现…473的电阻啥时候变成了470…啊这…第二天把电阻一改，诶嘿，好了！真是 <em>山穷水复疑无路，柳暗花明又一村</em> 啊！<br>&emsp;&emsp;然后就是调试程序，手机上装一个<code>NFC工具专业版</code>这个软件就可以实现对NFC名片的信息写入，可以写入的信息类型有：文本、URL/URI、文件、邮件、 <strong>联系人</strong> 、短信、WIFI、蓝牙等。经过测试，有些手机支持对不同类型信息自动处理，比如对文本信息是添加到便签；对联系人信息是直接新建通讯录联系人。<br><img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/%E8%81%94%E7%B3%BB%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5.jpg" alt="联系人信息写入">   </p>
+<h2 id="5、调试：80-的绝望"><a href="#5、调试：80-的绝望" class="headerlink" title="5、调试：80%的绝望"></a>5、调试：80%的绝望</h2><p>&emsp;&emsp;焊好的第一块板子，调了一晚上不成。一接触到手机的NFC区域，指示灯闪一下即熄灭，查阅了芯片手册、网上教程、问答均无果。<br>&emsp;&emsp;当我绝望的拿着NFC名片摆弄时，惊奇的发现…473的电阻啥时候变成了470…啊这…第二天把电阻一改，诶嘿，好了！真是 <em>山穷水复疑无路，柳暗花明又一村</em> 啊！<br>&emsp;&emsp;然后就是调试程序，手机上装一个<code>NFC工具专业版</code>这个软件就可以实现对NFC名片的信息写入，可以写入的信息类型有：文本、URL/URI、文件、邮件、 <strong>联系人</strong> 、短信、WIFI、蓝牙等。经过测试，有些手机支持对不同类型信息自动处理，比如对文本信息是添加到便签；对联系人信息是直接新建通讯录联系人。  </p>
+<img src="/2021/05/24/NFC%E5%90%8D%E7%89%87/%E8%81%94%E7%B3%BB%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5.jpg" class title="联系人信息写入">   
+
 <hr>
 <h2 id="6、复盘"><a href="#6、复盘" class="headerlink" title="6、复盘"></a>6、复盘</h2><p>&emsp;&emsp;记录一下这次设计与制作碰到的坑</p>
 <ol>
