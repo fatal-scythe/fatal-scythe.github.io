@@ -22,14 +22,14 @@
 <meta property="og:site_name" content="CyberBrain.top">
 <meta property="og:description" content="一个开源项目的改编与实现">
 <meta property="og:locale">
-<meta property="og:image" content="https://cyberbrain.top/posts/d7c458d6/%E5%B0%81%E9%9D%A2.jpg">
+<meta property="og:image" content="https://cyberbrain.top/posts/d7c458d6/cover.jpg">
 <meta property="article:published_time" content="2021-05-24T05:00:46.000Z">
-<meta property="article:modified_time" content="2021-05-24T14:48:58.930Z">
+<meta property="article:modified_time" content="2021-08-19T06:21:57.081Z">
 <meta property="article:author" content="无星之夜的咏叹调">
 <meta property="article:tag" content="电子设计">
 <meta property="article:tag" content="成功实现">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cyberbrain.top/posts/d7c458d6/%E5%B0%81%E9%9D%A2.jpg">
+<meta name="twitter:image" content="https://cyberbrain.top/posts/d7c458d6/cover.jpg">
 <meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
@@ -138,7 +138,7 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1621867738930"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1629354117081"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
@@ -160,20 +160,20 @@
 <p>&emsp;&emsp;经过我做出实物后，复盘后修改过的工程地址：<a target="_blank" rel="noopener" href="https://oshwhub.com/Aincrad/ji-yu-nfcde-ming-pian-ji-ji-yu-a">OSHW开源平台</a></p>
 <hr>
 <h2 id="3、PCB打样，元器件购买"><a href="#3、PCB打样，元器件购买" class="headerlink" title="3、PCB打样，元器件购买"></a>3、PCB打样，元器件购买</h2><p>&emsp;&emsp;嘉立创PCB打样，5块钱包邮！强烈推荐。  </p>
-<img src="/posts/d7c458d6/pcb%E6%89%93%E6%A0%B7.jpg" class title="嘉立创">  
+  
 <p>&emsp;&emsp;贴片电阻、贴片电容、贴片LED，嗯，实验室都有…嘿嘿~然后就是这个NFC芯片 <a target="_blank" rel="noopener" href="https://item.szlcsc.com/74269.html">NT3H1101W0FHKH</a> 了，购买10个+时，单价2.83，为了用刚刚才领的国赛队伍30减30助力券（别告诉我队友…）硬是买了11个芯片… </p>
-<img src="/posts/d7c458d6/nfc%E8%8A%AF%E7%89%87.jpg" class title="nfc芯片">
+<img src="/posts/d7c458d6/nfcchip2.jpg" class title="nfc芯片">
 <p>&emsp;&emsp; 一切准备就绪，就等快递打我电话了┗( ▔, ▔ )┛</p>
 <hr>
 <h2 id="4、焊接：热风枪初体验"><a href="#4、焊接：热风枪初体验" class="headerlink" title="4、焊接：热风枪初体验"></a>4、焊接：热风枪初体验</h2><p>&emsp;&emsp;芯片一到货，兴致勃勃拆开，一看，傻眼了。</p>
-<img src="/posts/d7c458d6/nfc%E8%8A%AF%E7%89%87%E5%AE%9E%E7%89%A9.jpg" class title="nfc芯片实物">  
+<img src="/posts/d7c458d6/nfcchip.jpg" class title="nfc芯片实物">  
 <p>这芯片9个焊点，2mm*2mm大小，还是XQFN8的封装。我之前焊HK32芯片都焊得我想再也不碰电烙铁，自闭了几天…这可咋整。<br>&emsp;&emsp;求助老师！老师二话不说拿起热风枪呼呼两下，哎呀，焊上了。后面我自己焊了4块，好家伙，热风枪这么强吗…</p>
-<img src="/posts/d7c458d6/%E7%83%AD%E9%A3%8E%E6%9E%AA.jpg" class title="热风枪真容">  
-<img src="/posts/d7c458d6/%E5%B1%80%E9%83%A8%E6%94%BE%E5%A4%A7.jpg" class title="芯片焊接细节">  
+<img src="/posts/d7c458d6/heatgun.jpg" class title="热风枪真容">  
+  
 <p>&emsp;&emsp;芯片焊好之后就是LED、电阻、电容了，这些都是比较简单。</p>
 <hr>
 <h2 id="5、调试：80-的绝望"><a href="#5、调试：80-的绝望" class="headerlink" title="5、调试：80%的绝望"></a>5、调试：80%的绝望</h2><p>&emsp;&emsp;焊好的第一块板子，调了一晚上不成。一接触到手机的NFC区域，指示灯闪一下即熄灭，查阅了芯片手册、网上教程、问答均无果。<br>&emsp;&emsp;当我绝望的拿着NFC名片摆弄时，惊奇的发现…473的电阻啥时候变成了470…啊这…第二天把电阻一改，诶嘿，好了！真是 <em>山穷水复疑无路，柳暗花明又一村</em> 啊！<br>&emsp;&emsp;然后就是调试程序，手机上装一个<code>NFC工具专业版</code>这个软件就可以实现对NFC名片的信息写入，可以写入的信息类型有：文本、URL/URI、文件、邮件、 <strong>联系人</strong> 、短信、WIFI、蓝牙等。经过测试，有些手机支持对不同类型信息自动处理，比如对文本信息是添加到便签；对联系人信息是直接新建通讯录联系人。  </p>
-<img src="/posts/d7c458d6/%E8%81%94%E7%B3%BB%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5.jpg" class title="联系人信息写入">   
+<img src="/posts/d7c458d6/infowrite.jpg" class title="联系人信息写入">   
 
 <hr>
 <h2 id="6、复盘"><a href="#6、复盘" class="headerlink" title="6、复盘"></a>6、复盘</h2><p>&emsp;&emsp;记录一下这次设计与制作碰到的坑</p>
@@ -278,7 +278,7 @@
                         <a class="tag-none-link" href="/tags/%E6%88%90%E5%8A%9F%E5%AE%9E%E7%8E%B0/" rel="tag">成功实现</a>, <a class="tag-none-link" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" rel="tag">电子设计</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-05-24</span>
+                    <span>最后编辑：2021-08-19</span>
                     </div>
                 </div>
             </footer>
@@ -348,7 +348,7 @@
                     
   <aside id="krw-categories" class="widget widget-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
@@ -357,7 +357,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/ESP32/" style="font-size: 0.67em;">ESP32</a> <a href="/tags/MicroPython/" style="font-size: 0.67em;">MicroPython</a> <a href="/tags/VB/" style="font-size: 0.6em;">VB</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 0.67em;">建站</a> <a href="/tags/%E6%88%90%E5%8A%9F%E5%AE%9E%E7%8E%B0/" style="font-size: 0.67em;">成功实现</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AE%B0/" style="font-size: 0.6em;">更新日记</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.6em;">生活</a> <a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" style="font-size: 0.73em;">电子设计</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.8em;">编程</a> <a href="/tags/%E9%A3%9F%E7%A5%9E%E4%B8%8B%E5%87%A1/" style="font-size: 0.6em;">食神下凡</a>
+        <a href="/tags/ESP32/" style="font-size: 0.67em;">ESP32</a> <a href="/tags/MicroPython/" style="font-size: 0.67em;">MicroPython</a> <a href="/tags/Python/" style="font-size: 0.6em;">Python</a> <a href="/tags/VB/" style="font-size: 0.6em;">VB</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 0.6em;">小工具</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 0.67em;">建站</a> <a href="/tags/%E6%88%90%E5%8A%9F%E5%AE%9E%E7%8E%B0/" style="font-size: 0.67em;">成功实现</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AE%B0/" style="font-size: 0.6em;">更新日记</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.6em;">生活</a> <a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" style="font-size: 0.73em;">电子设计</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.8em;">编程</a> <a href="/tags/%E9%A3%9F%E7%A5%9E%E4%B8%8B%E5%87%A1/" style="font-size: 0.6em;">食神下凡</a>
       </div>
   </aside>
 
@@ -368,6 +368,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/posts/f65b16b0/"><i class="fa  fa-book"></i> Python+OpenCV图片批量加水印</a>
+            
+          
         
           
           
@@ -394,11 +400,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/posts/25127c30/"><i class="fa  fa-book"></i> VisualBasic6.0——伴我走过编程路</a>
             
-          
-        
           
             
           
