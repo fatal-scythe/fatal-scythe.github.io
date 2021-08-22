@@ -24,7 +24,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://cyberbrain.top/posts/25127c30/cover.jpg">
 <meta property="article:published_time" content="2021-05-31T11:42:21.000Z">
-<meta property="article:modified_time" content="2021-08-19T06:42:39.078Z">
+<meta property="article:modified_time" content="2021-08-22T13:56:13.218Z">
 <meta property="article:author" content="无星之夜的咏叹调">
 <meta property="article:tag" content="编程">
 <meta property="article:tag" content="VB">
@@ -41,12 +41,14 @@
   <!-- 样式表文件 -->
   <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
   
   
   <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
   
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
   
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
@@ -55,9 +57,25 @@
     <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   
     <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -66,11 +84,9 @@
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
-            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
-            <header id="kratos-header-section">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
                 <div class="container">
                     <div class="nav-header">
-                        <div class="color-logo"><a href="/">CyberBrain.top</a></div>
                         <nav id="kratos-menu-wrap">
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
@@ -90,8 +106,37 @@
                                         <li><a href="/oldsite/"><i class="fa fa-link"></i>原始网站</a></li>
                                     
                                 
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>主题链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
                             </ul>
                         </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">CyberBrain.top</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -110,39 +155,49 @@
 
         <div id="kratos-blog-post">
             <div class="container">
-                <div class="row">
+                <div id="main" class="row">
                     
-        <div id="main">
+
+        
+
             <section class="col-md-8">
-    <article>
-        <div class="kratos-hentry kratos-post-inner clearfix">
-            <header class="kratos-entry-header">
+
+        
+
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
                 <h1 class="kratos-entry-title text-center">VisualBasic6.0——伴我走过编程路</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2021-05-31</li>
+                <li><i class="fa fa-user"></i> 作者 无星之夜的咏叹调</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~2.51K
+                    
+                    字
+                </li>
                 
-                <div class="kratos-post-meta text-center">
-                    <span id="/posts/25127c30/" class="leancloud_visitors" data-flag-title="VisualBasic6.0——伴我走过编程路">
-                        <i class="fa fa-calendar"></i> 2021-05-31
-                        <i class="fa fa-folder"></i> 分类 <a class="label-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-                        <i class="fa fa-user"></i> 作者 无星之夜的咏叹调
-                        <i class="fa fa-edit"></i> 
-                        
-                        
-                            ~2.51K
-                        
-                        字
-                        
-                            <i class="fa fa-eye"></i> 阅读 <span class="leancloud-visitors-count"></span> 次
-                        
-                    </span>
-                </div>
-            </header>
-            <div class="kratos-post-content">
-                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1629355359078"></time> 前，其中的内容可能需要更新。
-                </div>
+                    <li id="/posts/25127c30/" class="leancloud_visitors" data-flag-title="VisualBasic6.0——伴我走过编程路">
+                        <i class="fa fa-eye"></i>
+                        <span class="leancloud-visitors-count"> </span> 次阅读
+                    </li>
+                    
                 
-                <hr />
-                <h1 id="VisualBasic6-0——伴我走过编程路"><a href="#VisualBasic6-0——伴我走过编程路" class="headerlink" title="VisualBasic6.0——伴我走过编程路"></a>VisualBasic6.0——伴我走过编程路</h1><img src="/posts/25127c30/cover.jpg" class title="主题图片">  
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1629640573218"></time> 前，其中的内容可能需要更新。
+            </div>
+            
+            <hr />
+            <h1 id="VisualBasic6-0——伴我走过编程路"><a href="#VisualBasic6-0——伴我走过编程路" class="headerlink" title="VisualBasic6.0——伴我走过编程路"></a>VisualBasic6.0——伴我走过编程路</h1><img src="/posts/25127c30/cover.jpg" class title="主题图片">  
 
 <hr>
 <h2 id="1、什么是Visual-Basic？"><a href="#1、什么是Visual-Basic？" class="headerlink" title="1、什么是Visual Basic？"></a>1、什么是Visual Basic？</h2><p>&emsp;&emsp;这是一门编程语言，是一款可视化集成编程工具，是微软1991年推出的亲儿子。今天的主角“Visual Basic 6.0”是1998年微软推出的跨时代经典产品。其特点是面向过程、无可移植性（仅支持windows操作系统）、可视化编程、模块化编程、占用资源低、简单，以上特点在某种程度上看来就是优点，特别是对于初学者来说。当然，这些优点在某种程度上来说也是它的缺点，扩展性差，无法编写大型应用等都决定了它必然的衰退。<br>&emsp;&emsp;说了这么多，大家可能的印象还是“这啥语言啊？没听说过”，正因为如此，我写了这篇文章，目的是纪念。  </p>
@@ -182,16 +237,16 @@
 <img src="/posts/25127c30/07.jpg" class>  
 <center>游戏内截图</center> 
 </li>
-<li><p>3、大文件生成<br><font color="red"><i>生成你想要大小的文件，内容无意义</i></font><br>程序简介：其实生成的是文本文件，可以用记事本打开（希望不会特别卡…）<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90.exe">点击下载</a>  </p>
+<li><p>3、大文件生成<br><font color="red"><i>生成你想要大小的文件，内容无意义</i></font><br>程序简介：其实生成的是文本文件，可以用记事本打开（希望不会特别卡…）<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90.zip">点击下载</a>  </p>
 <img src="/posts/25127c30/08.jpg" class>  
 </li>
-<li><p>4、2进制加密<br><font color="red"><i>原理是对文件的每个字节进行凯撒位移</i></font><br>程序简介：请一定记得设置的密码，不然就得试9999次了！<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E5%8A%A0%E5%AF%861.1.exe">点击下载</a>  </p>
+<li><p>4、2进制加密<br><font color="red"><i>原理是对文件的每个字节进行凯撒位移</i></font><br>程序简介：请一定记得设置的密码，不然就得试9999次了！<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E5%8A%A0%E5%AF%861.1.zip">点击下载</a>  </p>
 <img src="/posts/25127c30/09.jpg" class>  
 </li>
-<li><p>4、点名（Beta版本、2.0版本）<br><font color="red"><i>支持自定义班级，自定义学生！</i></font><br>程序简介：写这个最初是方便Emily（English teacher)上课抽人回答问题<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E7%82%B9%E5%90%8D2.exe">点名2</a>  </p>
+<li><p>4、点名（Beta版本、2.0版本）<br><font color="red"><i>支持自定义班级，自定义学生！</i></font><br>程序简介：写这个最初是方便Emily（English teacher)上课抽人回答问题<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E7%82%B9%E5%90%8D2.zip">点名2</a>  </p>
 <img src="/posts/25127c30/10.jpg" class>  
 </li>
-<li><p>5、代码管理器<br><font color="red"><i>记录和管理那些常用到的代码！</i></font><br>程序简介：好的，我知道这个软件实用性不强。但是其意义是很明显的，说明那时的我就意识到需要这么一个工具来进行记录（就是笔记本吧）。不过这肯定是我之前<strong>UI做得最好</strong>的一个软件了！可以修改字体大小，字体前景色和背景色！<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8.exe">点击下载</a>  </p>
+<li><p>5、代码管理器<br><font color="red"><i>记录和管理那些常用到的代码！</i></font><br>程序简介：好的，我知道这个软件实用性不强。但是其意义是很明显的，说明那时的我就意识到需要这么一个工具来进行记录（就是笔记本吧）。不过这肯定是我之前<strong>UI做得最好</strong>的一个软件了！可以修改字体大小，字体前景色和背景色！<br>下载地址：<a href="http://cyberbrain.top/oldsite/files/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8.zip">点击下载</a>  </p>
 <img src="/posts/25127c30/11.jpg" class>  
 </li>
 <li><p>5、局域控制<br>程序简介：使用socket进行局域网通信，根据我自己设计的通信协议，主机可以向从机发送<strong>指令</strong>或者<strong>数据</strong>，然后从机调用系统API，达到远程控制的效果。  </p>
@@ -206,21 +261,21 @@
 <hr>
 <h2 id="4、新时代"><a href="#4、新时代" class="headerlink" title="4、新时代"></a>4、新时代</h2><p>&emsp;&emsp;高二下学期发生了很多事情，等到高三分班之后我就专心学习了，没有再搞这些。现在想想高二上的某两个星期，天天上课、吃饭、睡觉都在想怎么设计这个游戏，怎么来编程…真是疯狂。<br>&emsp;&emsp;VB还是太老跟不上时代了，从此之后我就没有再怎么用过它了，它也终将火活在我的记忆中。等到高三毕业，看着Python越来越火，闲下来的我也有了新的事情可以做…<strong>生命不息、编程不止！</strong><br>&emsp;&emsp;<del>推荐一波小甲鱼的Python入门课（互谅网的广大朋友们大家好~）哈哈哈</del></p>
 
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
             </div>
+        
+        <footer class="kratos-entry-footer clearfix">
             
-                <div class="kratos-copyright text-center clearfix">
-                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
-                </div>
-            
-            <footer class="kratos-entry-footer clearfix">
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
                 
-                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                    
-                        <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
-                    
-                    
-                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
-                        <div class="share-wrap" style="display: none;">
+                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
     <div class="share-group">
         <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
             <div class="icon-wrap">
@@ -290,36 +345,36 @@
         };
     </script>
 </div>
-                    
-                    </div>
                 
-                <div class="footer-tag clearfix">
-                    <div class="pull-left">
-                    <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/VB/" rel="tag">VB</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
-                    </div>
-                    <div class="pull-date">
-                    <span>最后编辑：2021-08-19</span>
-                    </div>
                 </div>
-            </footer>
-        </div>
-        
-            <nav class="navigation post-navigation clearfix" role="navigation">
-                
-                <div class="nav-previous clearfix">
-                    <a title=" NFC名片" href="/posts/d7c458d6/">&lt; 上一篇</a>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/VB/" rel="tag">VB</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
                 </div>
-                
-                
-                <div class="nav-next clearfix">
-                    <a title=" Keil Studio来了，但还没完全来" href="/posts/a637d452/">下一篇 &gt;</a>
+                <div class="pull-date">
+                <span>最后编辑：2021-08-22</span>
                 </div>
-                
-            </nav>
-        
-        
-            <div id="v-comments" class="post-comments"></div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" NFC名片" href="/posts/d7c458d6/">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" Keil Studio来了，但还没完全来" href="/posts/a637d452/">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+        <div id="v-comments" class="post-comments"></div>
 <script>
     var load_comm = () => {
         const init = () => {
@@ -329,7 +384,8 @@
                 appKey: 'qx4laKuPFgL71VYJ1RwdBOgm',
                 visitor: true,
                 enableQQ: true,
-                path: '/posts/25127c30/'
+                path: '/posts/25127c30/',
+                avatar: 'retro'
             });
         }
         if (typeof Valine == 'undefined') {
@@ -342,15 +398,23 @@
 </script>
 <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
 
-        
-    </article>
-</section>
-        </div>
-                
-            <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-                
-                    <aside id="krw-about" class="widget widget-kratos-about clearfix">
     
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
@@ -358,23 +422,21 @@
         </div>
     </div>
     <div class="textwidget">
-        
-            <p class="text-center">个人博客，无星之夜的咏叹调 分享一些电子、编程、计算机的相关资讯</p>
-        
+        <p class="text-center">个人博客，无星之夜的咏叹调 分享一些电子、编程、计算机的相关资讯</p>
     </div>
 </aside>
+            
+                    <div class="sticky-area">
                 
-                    <!-- Moved to about.ejs -->
                 
-                    
-  <aside id="krw-categories" class="widget widget-categories clearfix">
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
+            
                 
-                    
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
@@ -382,9 +444,9 @@
       </div>
   </aside>
 
+            
                 
-                    
-  <aside id="krw-posts" class="widget widget-kratos-poststab">
+  <aside id="krw-posts" class="widget widget-kratos-posts">
   <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
   <div class="tab-content">
       <ul class="list-group">
@@ -434,14 +496,15 @@
   </div>
   </aside>
 
-                
-            </section>
+            
+    </div>
+</section>
         
         </div>
     </div>
 </div>
 <footer>
-    <div id="footer">
+    <div id="footer"  class="ap-lrc"  >
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -467,7 +530,7 @@
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <ul class="kratos-social-icons">
                         
-                        <li><a href="mailto:957110877@qq.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="mailto:fatalscythe@163.com"><i class="fa fa-envelope"></i></a></li>
                         
                         
                         
@@ -478,16 +541,16 @@
                     </ul>
                     <ul class="kratos-copyright">
                         <div>
-                            <li>&copy; 2021 无星之夜的咏叹调 版权所有.</li>
+                            <li>&copy; 2021 CyberBrain.top 版权所有.</li>
                             <li>本站已运行<span id="span_dt">Loading...</span></li>
                         </div>
                         <div>
                             <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 无星之夜的咏叹调.</li>
                         </div>
                         <div>
                             <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://coding.net" target="_blank">CODING</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
                         </div>
                         <div>
                             
@@ -511,7 +574,23 @@
         <script async type="text/javascript" src="/js/snow.min.js"></script>
     </div>
 
-<script async src="/js/candy.min.js"></script>
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
 
 
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -524,6 +603,10 @@
 
 
     <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
 
 
     </body>

@@ -40,12 +40,14 @@
   <!-- 样式表文件 -->
   <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
   
   
   <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
   
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
   
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
@@ -54,9 +56,25 @@
     <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   
     <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -65,11 +83,9 @@
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
-            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
-            <header id="kratos-header-section">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
                 <div class="container">
                     <div class="nav-header">
-                        <div class="color-logo"><a href="/">CyberBrain.top</a></div>
                         <nav id="kratos-menu-wrap">
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
@@ -89,8 +105,37 @@
                                         <li><a href="/oldsite/"><i class="fa fa-link"></i>原始网站</a></li>
                                     
                                 
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>主题链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
                             </ul>
                         </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">CyberBrain.top</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -109,39 +154,49 @@
 
         <div id="kratos-blog-post">
             <div class="container">
-                <div class="row">
+                <div id="main" class="row">
                     
-        <div id="main">
+
+        
+
             <section class="col-md-8">
-    <article>
-        <div class="kratos-hentry kratos-post-inner clearfix">
-            <header class="kratos-entry-header">
+
+        
+
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
                 <h1 class="kratos-entry-title text-center">使用Hexo建站，挂在Github上</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2021-01-23</li>
+                <li><i class="fa fa-user"></i> 作者 无星之夜的咏叹调</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~1.68K
+                    
+                    字
+                </li>
                 
-                <div class="kratos-post-meta text-center">
-                    <span id="/posts/cd509402/" class="leancloud_visitors" data-flag-title="使用Hexo建站，挂在Github上">
-                        <i class="fa fa-calendar"></i> 2021-01-23
-                        <i class="fa fa-folder"></i> 分类 <a class="label-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a>
-                        <i class="fa fa-user"></i> 作者 无星之夜的咏叹调
-                        <i class="fa fa-edit"></i> 
-                        
-                        
-                            ~1.68K
-                        
-                        字
-                        
-                            <i class="fa fa-eye"></i> 阅读 <span class="leancloud-visitors-count"></span> 次
-                        
-                    </span>
-                </div>
-            </header>
-            <div class="kratos-post-content">
-                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1629355260778"></time> 前，其中的内容可能需要更新。
-                </div>
+                    <li id="/posts/cd509402/" class="leancloud_visitors" data-flag-title="使用Hexo建站，挂在Github上">
+                        <i class="fa fa-eye"></i>
+                        <span class="leancloud-visitors-count"> </span> 次阅读
+                    </li>
+                    
                 
-                <hr />
-                <h1 id="一穷二白的开山之作"><a href="#一穷二白的开山之作" class="headerlink" title="一穷二白的开山之作"></a>一穷二白的开山之作</h1><h2 id="1、参考B站up主”CodeSheep”的视频，成功建站"><a href="#1、参考B站up主”CodeSheep”的视频，成功建站" class="headerlink" title="1、参考B站up主”CodeSheep”的视频，成功建站"></a>1、参考B站up主”CodeSheep”的视频，成功建站</h2><p>&emsp;&emsp;一个厉害的同学给我推荐了<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">CodeSheep的B站教学视频</a>这个视频讲得十分详细，还有弹幕助攻，照着做是可以完成的。<br>&emsp;&emsp;视频主要内容就是使用<strong>hexo</strong>这个博客框架和github提供的page服务，让你可以高效、优雅且免费（！）的搭建一个静态的个人博客。这个静态并不是指你所看到的网页是静止的，它也可以有各种动图、视频、音乐、交互响应等。而github的page服务让我们免去了租赁服务器的费用，只需要注册个github账号，将我们的站点文件上传到仓库，并开始page服务就可以让别人愉快的访问啦~<br>&emsp;&emsp;我搞了一晚上之后成功了，本来是挂在github上，但因为奇慢的速度让人心烦，就熬夜捣鼓了下放在gitee上了。感觉速度杠杠的~看着效果不错，然后就累了睡去…</p>
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1629355260778"></time> 前，其中的内容可能需要更新。
+            </div>
+            
+            <hr />
+            <h1 id="一穷二白的开山之作"><a href="#一穷二白的开山之作" class="headerlink" title="一穷二白的开山之作"></a>一穷二白的开山之作</h1><h2 id="1、参考B站up主”CodeSheep”的视频，成功建站"><a href="#1、参考B站up主”CodeSheep”的视频，成功建站" class="headerlink" title="1、参考B站up主”CodeSheep”的视频，成功建站"></a>1、参考B站up主”CodeSheep”的视频，成功建站</h2><p>&emsp;&emsp;一个厉害的同学给我推荐了<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">CodeSheep的B站教学视频</a>这个视频讲得十分详细，还有弹幕助攻，照着做是可以完成的。<br>&emsp;&emsp;视频主要内容就是使用<strong>hexo</strong>这个博客框架和github提供的page服务，让你可以高效、优雅且免费（！）的搭建一个静态的个人博客。这个静态并不是指你所看到的网页是静止的，它也可以有各种动图、视频、音乐、交互响应等。而github的page服务让我们免去了租赁服务器的费用，只需要注册个github账号，将我们的站点文件上传到仓库，并开始page服务就可以让别人愉快的访问啦~<br>&emsp;&emsp;我搞了一晚上之后成功了，本来是挂在github上，但因为奇慢的速度让人心烦，就熬夜捣鼓了下放在gitee上了。感觉速度杠杠的~看着效果不错，然后就累了睡去…</p>
 <hr>
 <h2 id="2、域名绑定"><a href="#2、域名绑定" class="headerlink" title="2、域名绑定"></a>2、域名绑定</h2><p>&emsp;&emsp;第二天，在我绑定域名的时候发现，gitee的自定义域名功能和自动部署功能居然要收钱？？唉，算了，好像github白天挺快的，那就还是换回去吧~<br>&emsp;&emsp;沿用从前的域名：iloveasuna.cn</p>
 <hr>
@@ -159,21 +214,21 @@
 <h2 id="6、没想到还有6"><a href="#6、没想到还有6" class="headerlink" title="6、没想到还有6"></a>6、没想到还有6</h2><p>&emsp;&emsp;应该没有别的要说了，最后…下面有打赏按钮，大家可以帮忙试一下好不好用哦~ (*^▽^*)</p>
 <h2 id="7、2021年5月17日"><a href="#7、2021年5月17日" class="headerlink" title="7、2021年5月17日"></a>7、2021年5月17日</h2><p>&emsp;&emsp;注册了域名<code>cyberbrain.top</code>，电子脑嘛hhh。<br>&emsp;&emsp;并且把网站部署在了CODING上。  </p>
 
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
             </div>
+        
+        <footer class="kratos-entry-footer clearfix">
             
-                <div class="kratos-copyright text-center clearfix">
-                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
-                </div>
-            
-            <footer class="kratos-entry-footer clearfix">
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
                 
-                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                    
-                        <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
-                    
-                    
-                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
-                        <div class="share-wrap" style="display: none;">
+                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
     <div class="share-group">
         <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
             <div class="icon-wrap">
@@ -240,32 +295,32 @@
         };
     </script>
 </div>
-                    
-                    </div>
                 
-                <div class="footer-tag clearfix">
-                    <div class="pull-left">
-                    <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag">建站</a>
-                    </div>
-                    <div class="pull-date">
-                    <span>最后编辑：2021-08-19</span>
-                    </div>
                 </div>
-            </footer>
-        </div>
-        
-            <nav class="navigation post-navigation clearfix" role="navigation">
-                
-                
-                <div class="nav-next clearfix">
-                    <a title=" 博客更新日记" href="/posts/3a4f2bb0/">下一篇 &gt;</a>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag">建站</a>
                 </div>
-                
-            </nav>
-        
-        
-            <div id="v-comments" class="post-comments"></div>
+                <div class="pull-date">
+                <span>最后编辑：2021-08-19</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 博客更新日记" href="/posts/3a4f2bb0/">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+        <div id="v-comments" class="post-comments"></div>
 <script>
     var load_comm = () => {
         const init = () => {
@@ -275,7 +330,8 @@
                 appKey: 'qx4laKuPFgL71VYJ1RwdBOgm',
                 visitor: true,
                 enableQQ: true,
-                path: '/posts/cd509402/'
+                path: '/posts/cd509402/',
+                avatar: 'retro'
             });
         }
         if (typeof Valine == 'undefined') {
@@ -288,15 +344,23 @@
 </script>
 <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
 
-        
-    </article>
-</section>
-        </div>
-                
-            <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-                
-                    <aside id="krw-about" class="widget widget-kratos-about clearfix">
     
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
@@ -304,23 +368,21 @@
         </div>
     </div>
     <div class="textwidget">
-        
-            <p class="text-center">个人博客，无星之夜的咏叹调 分享一些电子、编程、计算机的相关资讯</p>
-        
+        <p class="text-center">个人博客，无星之夜的咏叹调 分享一些电子、编程、计算机的相关资讯</p>
     </div>
 </aside>
+            
+                    <div class="sticky-area">
                 
-                    <!-- Moved to about.ejs -->
                 
-                    
-  <aside id="krw-categories" class="widget widget-categories clearfix">
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
+            
                 
-                    
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
@@ -328,9 +390,9 @@
       </div>
   </aside>
 
+            
                 
-                    
-  <aside id="krw-posts" class="widget widget-kratos-poststab">
+  <aside id="krw-posts" class="widget widget-kratos-posts">
   <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
   <div class="tab-content">
       <ul class="list-group">
@@ -380,14 +442,15 @@
   </div>
   </aside>
 
-                
-            </section>
+            
+    </div>
+</section>
         
         </div>
     </div>
 </div>
 <footer>
-    <div id="footer">
+    <div id="footer"  class="ap-lrc"  >
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -413,7 +476,7 @@
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <ul class="kratos-social-icons">
                         
-                        <li><a href="mailto:957110877@qq.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="mailto:fatalscythe@163.com"><i class="fa fa-envelope"></i></a></li>
                         
                         
                         
@@ -424,16 +487,16 @@
                     </ul>
                     <ul class="kratos-copyright">
                         <div>
-                            <li>&copy; 2021 无星之夜的咏叹调 版权所有.</li>
+                            <li>&copy; 2021 CyberBrain.top 版权所有.</li>
                             <li>本站已运行<span id="span_dt">Loading...</span></li>
                         </div>
                         <div>
                             <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 无星之夜的咏叹调.</li>
                         </div>
                         <div>
                             <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://coding.net" target="_blank">CODING</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
                         </div>
                         <div>
                             
@@ -457,7 +520,23 @@
         <script async type="text/javascript" src="/js/snow.min.js"></script>
     </div>
 
-<script async src="/js/candy.min.js"></script>
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
 
 
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -470,6 +549,10 @@
 
 
     <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
 
 
     </body>

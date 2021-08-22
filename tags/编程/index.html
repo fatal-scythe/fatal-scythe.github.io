@@ -40,12 +40,14 @@
   <!-- 样式表文件 -->
   <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
   
   
   <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
   
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
   
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
@@ -54,9 +56,25 @@
     <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   
     <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -65,11 +83,9 @@
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
-            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
-            <header id="kratos-header-section">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
                 <div class="container">
                     <div class="nav-header">
-                        <div class="color-logo"><a href="/">CyberBrain.top</a></div>
                         <nav id="kratos-menu-wrap">
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
@@ -89,8 +105,37 @@
                                         <li><a href="/oldsite/"><i class="fa fa-link"></i>原始网站</a></li>
                                     
                                 
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>主题链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
                             </ul>
                         </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">CyberBrain.top</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -109,225 +154,378 @@
 
         <div id="kratos-blog-post">
             <div class="container">
-                <div class="row">
+                <div id="main" class="row">
                     
-        <div id="main">
+
+        
+
+            <section class="col-md-8">
+
+        
+
             
-        <section class="col-md-8">
-            
+    
+    
+        <article class="kratos-hentry clearfix">
+            <div class="kratos-entry-border-new clearfix">
                 
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
+                <div class="kratos-entry-thumb-new">
+                    <a href="/posts/f65b16b0/">
+                        
+                            <img class="kratos-entry-thumb-new-img" src="/posts/f65b16b0/cover.jpg">
+                        
+                    </a>
+                </div>
+                <div class="kratos-post-inner-new">
+                    <header class="kratos-entry-header-new">
+                            <a class="label-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+                        <h2 class="kratos-entry-title-new"><a href="/posts/f65b16b0/">Python+OpenCV图片批量加水印</a>
+                    </header>
+                    <div class="kratos-entry-content-new">
+                        <p>
                             
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/posts/f65b16b0/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img" src="/posts/f65b16b0/cover.jpg">
-                                    
-                                </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        <a class="label-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-                                    <h2 class="kratos-entry-title-new"><a href="/posts/f65b16b0/">Python+OpenCV图片批量加水印</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            Python-OpenCV图片批量加水印  
+                                Python-OpenCV图片批量加水印  
 
 
 1、先说两句&emsp;&emsp;现在写博客讲究的是图文结合，所以啊每一篇文章的图也是越来越多，之前我是手动一张图一张图去加水印，效果不错，就是太太太太麻烦了…&emsp;&emsp...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2021-08-19</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    <a class="tag-none-link" href="/tags/Python/" rel="tag">Python</a>, <a class="tag-none-link" href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" rel="tag">小工具</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/posts/f65b16b0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
-                
-            
-                
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
                             
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/posts/96ca2895/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img" src="/posts/96ca2895/cover.jpg">
-                                    
+                        </p>
+                    </div>
+                </div>
+                <footer class="kratos-post-meta-new">
+                    <span class="pull-left">
+                        <a>
+                            <i class="fa fa-calendar"></i>
+                            2021-08-19
+                        </a>
+                        <a>
+                            
+                                <i class="fa fa-tags"></i>
+                                <a class="tag-none-link" href="/tags/Python/" rel="tag">Python</a>, <a class="tag-none-link" href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" rel="tag">小工具</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+                            
+                        </a>
+                        
+                            <!-- 当前仅支持valine/waline自带的统计功能 -->
+                            
+                                <a id="/posts/f65b16b0/" class="leancloud_visitors" data-flag-title="Python+OpenCV图片批量加水印">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="leancloud-visitors-count"> </span> 次阅读
                                 </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        <a class="label-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a>
-                                    <h2 class="kratos-entry-title-new"><a href="/posts/96ca2895/">ESP32开发指南（二）：学习链接推荐</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            ESP32开发指南（二）：学习链接推荐
+                            
+                        
+                        
+                            <!-- 当前仅支持waline自带的统计功能 -->
+                            
+                        
+                    </span>
+                    <span class="pull-right">
+                        <a class="read-more" href="/posts/f65b16b0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                    </span>
+                </footer>
+            </div>
+        </article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix">
+            <div class="kratos-entry-border-new clearfix">
+                
+                <div class="kratos-entry-thumb-new">
+                    <a href="/posts/96ca2895/">
+                        
+                            <img class="kratos-entry-thumb-new-img" src="/posts/96ca2895/cover.jpg">
+                        
+                    </a>
+                </div>
+                <div class="kratos-post-inner-new">
+                    <header class="kratos-entry-header-new">
+                            <a class="label-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a>
+                        <h2 class="kratos-entry-title-new"><a href="/posts/96ca2895/">ESP32开发指南（二）：学习链接推荐</a>
+                    </header>
+                    <div class="kratos-entry-content-new">
+                        <p>
+                            
+                                ESP32开发指南（二）：学习链接推荐
 一、先吐槽一句&emsp;&emsp;本来下面二、连接推荐是应该放在ESP32开发指南（一）里的..,这次一中的内容实在太多，hexo居然渲染不出来后面的了！我吐了…不得不再开一篇文章…  
 
 ...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2021-08-17</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    <a class="tag-none-link" href="/tags/ESP32/" rel="tag">ESP32</a>, <a class="tag-none-link" href="/tags/MicroPython/" rel="tag">MicroPython</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/posts/96ca2895/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
-                
-            
-                
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
                             
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/posts/eb013833/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img" src="/posts/eb013833/cover.jpg">
-                                    
+                        </p>
+                    </div>
+                </div>
+                <footer class="kratos-post-meta-new">
+                    <span class="pull-left">
+                        <a>
+                            <i class="fa fa-calendar"></i>
+                            2021-08-17
+                        </a>
+                        <a>
+                            
+                                <i class="fa fa-tags"></i>
+                                <a class="tag-none-link" href="/tags/ESP32/" rel="tag">ESP32</a>, <a class="tag-none-link" href="/tags/MicroPython/" rel="tag">MicroPython</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+                            
+                        </a>
+                        
+                            <!-- 当前仅支持valine/waline自带的统计功能 -->
+                            
+                                <a id="/posts/96ca2895/" class="leancloud_visitors" data-flag-title="ESP32开发指南（二）：学习链接推荐">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="leancloud-visitors-count"> </span> 次阅读
                                 </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        <a class="label-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a>
-                                    <h2 class="kratos-entry-title-new"><a href="/posts/eb013833/">ESP32开发指南（一）：刷MicroPython固件，使用VSCode开发</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            ESP32开发指南（一）：刷MicroPython固件，使用VSCode开发
-作者开发环境与器材准备
+                            
+                        
+                        
+                            <!-- 当前仅支持waline自带的统计功能 -->
+                            
+                        
+                    </span>
+                    <span class="pull-right">
+                        <a class="read-more" href="/posts/96ca2895/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                    </span>
+                </footer>
+            </div>
+        </article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix">
+            <div class="kratos-entry-border-new clearfix">
+                
+                <div class="kratos-entry-thumb-new">
+                    <a href="/posts/eb013833/">
+                        
+                            <img class="kratos-entry-thumb-new-img" src="/posts/eb013833/cover.jpg">
+                        
+                    </a>
+                </div>
+                <div class="kratos-post-inner-new">
+                    <header class="kratos-entry-header-new">
+                            <a class="label-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a>
+                        <h2 class="kratos-entry-title-new"><a href="/posts/eb013833/">ESP32开发指南（一）：刷MicroPython固件，使用VSCode开发</a>
+                    </header>
+                    <div class="kratos-entry-content-new">
+                        <p>
+                            
+                                作者开发环境与器材准备
 操作系统: Windows 10 家庭版  
 Python版本: Python 3.7.8  
-WIFI模组: 安信可NodeMCU...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2021-08-17</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    <a class="tag-none-link" href="/tags/ESP32/" rel="tag">ESP32</a>, <a class="tag-none-link" href="/tags/MicroPython/" rel="tag">MicroPython</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/posts/eb013833/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
-                
-            
-                
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
+WIFI模组: 安信可NodeMCU-32 v1.3(CH340版)  
+
+
+一、ESP32简介安信可ESP32模...
                             
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/posts/a637d452/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img" src="/posts/a637d452/cover.jpg">
-                                    
-                                </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        <a class="label-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a>
-                                    <h2 class="kratos-entry-title-new"><a href="/posts/a637d452/">Keil Studio来了，但还没完全来</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            Keil Studio来了，但还没完全来&emsp;&emsp;距离2013年10月，推出的Keil MDK V5.0版本已经过去了快8年了，VS code都成了宇宙第一编辑器，6月10日，ARM终于推出了全新的Keil Studio...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2021-06-26</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    <a class="tag-none-link" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" rel="tag">电子设计</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/posts/a637d452/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
-                
-            
-                
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
+                        </p>
+                    </div>
+                </div>
+                <footer class="kratos-post-meta-new">
+                    <span class="pull-left">
+                        <a>
+                            <i class="fa fa-calendar"></i>
+                            2021-08-17
+                        </a>
+                        <a>
                             
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/posts/25127c30/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img" src="/posts/25127c30/cover.jpg">
-                                    
+                                <i class="fa fa-tags"></i>
+                                <a class="tag-none-link" href="/tags/ESP32/" rel="tag">ESP32</a>, <a class="tag-none-link" href="/tags/MicroPython/" rel="tag">MicroPython</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+                            
+                        </a>
+                        
+                            <!-- 当前仅支持valine/waline自带的统计功能 -->
+                            
+                                <a id="/posts/eb013833/" class="leancloud_visitors" data-flag-title="ESP32开发指南（一）：刷MicroPython固件，使用VSCode开发">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="leancloud-visitors-count"> </span> 次阅读
                                 </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        <a class="label-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-                                    <h2 class="kratos-entry-title-new"><a href="/posts/25127c30/">VisualBasic6.0——伴我走过编程路</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            VisualBasic6.0——伴我走过编程路  
+                            
+                        
+                        
+                            <!-- 当前仅支持waline自带的统计功能 -->
+                            
+                        
+                    </span>
+                    <span class="pull-right">
+                        <a class="read-more" href="/posts/eb013833/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                    </span>
+                </footer>
+            </div>
+        </article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix">
+            <div class="kratos-entry-border-new clearfix">
+                
+                <div class="kratos-entry-thumb-new">
+                    <a href="/posts/a637d452/">
+                        
+                            <img class="kratos-entry-thumb-new-img" src="/posts/a637d452/cover.jpg">
+                        
+                    </a>
+                </div>
+                <div class="kratos-post-inner-new">
+                    <header class="kratos-entry-header-new">
+                            <a class="label-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a>
+                        <h2 class="kratos-entry-title-new"><a href="/posts/a637d452/">Keil Studio来了，但还没完全来</a>
+                    </header>
+                    <div class="kratos-entry-content-new">
+                        <p>
+                            
+                                Keil Studio来了，但还没完全来&emsp;&emsp;距离2013年10月，推出的Keil MDK V5.0版本已经过去了快8年了，VS code都成了宇宙第一编辑器，6月10日，ARM终于推出了全新的Keil Studio...
+                            
+                        </p>
+                    </div>
+                </div>
+                <footer class="kratos-post-meta-new">
+                    <span class="pull-left">
+                        <a>
+                            <i class="fa fa-calendar"></i>
+                            2021-06-26
+                        </a>
+                        <a>
+                            
+                                <i class="fa fa-tags"></i>
+                                <a class="tag-none-link" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" rel="tag">电子设计</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+                            
+                        </a>
+                        
+                            <!-- 当前仅支持valine/waline自带的统计功能 -->
+                            
+                                <a id="/posts/a637d452/" class="leancloud_visitors" data-flag-title="Keil Studio来了，但还没完全来">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="leancloud-visitors-count"> </span> 次阅读
+                                </a>
+                            
+                        
+                        
+                            <!-- 当前仅支持waline自带的统计功能 -->
+                            
+                        
+                    </span>
+                    <span class="pull-right">
+                        <a class="read-more" href="/posts/a637d452/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                    </span>
+                </footer>
+            </div>
+        </article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix">
+            <div class="kratos-entry-border-new clearfix">
+                
+                <div class="kratos-entry-thumb-new">
+                    <a href="/posts/25127c30/">
+                        
+                            <img class="kratos-entry-thumb-new-img" src="/posts/25127c30/cover.jpg">
+                        
+                    </a>
+                </div>
+                <div class="kratos-post-inner-new">
+                    <header class="kratos-entry-header-new">
+                            <a class="label-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+                        <h2 class="kratos-entry-title-new"><a href="/posts/25127c30/">VisualBasic6.0——伴我走过编程路</a>
+                    </header>
+                    <div class="kratos-entry-content-new">
+                        <p>
+                            
+                                VisualBasic6.0——伴我走过编程路  
 
 
 1、什么是Visual Basic？&emsp;&emsp;这是一门编程语言，是一款可视化集成编程工具，是微软1991年推出的亲儿子。今天的主角“Visual Basic 6.0...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2021-05-31</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    <a class="tag-none-link" href="/tags/VB/" rel="tag">VB</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/posts/25127c30/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
-                
-            
-            
-            
-        </section>
-
-        </div>
-                
-            <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-                
-                    <aside id="krw-about" class="widget widget-kratos-about clearfix">
+                            
+                        </p>
+                    </div>
+                </div>
+                <footer class="kratos-post-meta-new">
+                    <span class="pull-left">
+                        <a>
+                            <i class="fa fa-calendar"></i>
+                            2021-05-31
+                        </a>
+                        <a>
+                            
+                                <i class="fa fa-tags"></i>
+                                <a class="tag-none-link" href="/tags/VB/" rel="tag">VB</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+                            
+                        </a>
+                        
+                            <!-- 当前仅支持valine/waline自带的统计功能 -->
+                            
+                                <a id="/posts/25127c30/" class="leancloud_visitors" data-flag-title="VisualBasic6.0——伴我走过编程路">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="leancloud-visitors-count"> </span> 次阅读
+                                </a>
+                            
+                        
+                        
+                            <!-- 当前仅支持waline自带的统计功能 -->
+                            
+                        
+                    </span>
+                    <span class="pull-right">
+                        <a class="read-more" href="/posts/25127c30/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                    </span>
+                </footer>
+            </div>
+        </article>
     
+
+
+
+
+
+    <div class="hidden">
+        <!-- 加载文章阅读对应的统计功能，评论自带的那种 -->
+        
+            <div id="v-comments" class="post-comments"></div>
+<script>
+    var load_comm = () => {
+        const init = () => {
+            new Valine({
+                el: '#v-comments',
+                appId: 'mPJMkP5MIOdrPaqfqhkkzdA2-gzGzoHsz',
+                appKey: 'qx4laKuPFgL71VYJ1RwdBOgm',
+                visitor: true,
+                enableQQ: true,
+                path: '/tags/%E7%BC%96%E7%A8%8B/index.html',
+                avatar: 'retro'
+            });
+        }
+        if (typeof Valine == 'undefined') {
+            const src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
+            $.getScript(src, init);
+        } else {
+            init();
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
+
+        
+    </div>
+
+
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
@@ -335,23 +533,19 @@ WIFI模组: 安信可NodeMCU...
         </div>
     </div>
     <div class="textwidget">
-        
-            <p class="text-center">个人博客，无星之夜的咏叹调 分享一些电子、编程、计算机的相关资讯</p>
-        
+        <p class="text-center">个人博客，无星之夜的咏叹调 分享一些电子、编程、计算机的相关资讯</p>
     </div>
 </aside>
+            
                 
-                    <!-- Moved to about.ejs -->
-                
-                    
-  <aside id="krw-categories" class="widget widget-categories clearfix">
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
+            
                 
-                    
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
@@ -359,9 +553,9 @@ WIFI模组: 安信可NodeMCU...
       </div>
   </aside>
 
+            
                 
-                    
-  <aside id="krw-posts" class="widget widget-kratos-poststab">
+  <aside id="krw-posts" class="widget widget-kratos-posts">
   <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
   <div class="tab-content">
       <ul class="list-group">
@@ -411,14 +605,15 @@ WIFI模组: 安信可NodeMCU...
   </div>
   </aside>
 
-                
-            </section>
+            
+    </div>
+</section>
         
         </div>
     </div>
 </div>
 <footer>
-    <div id="footer">
+    <div id="footer"  class="ap-lrc"  >
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -444,7 +639,7 @@ WIFI模组: 安信可NodeMCU...
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <ul class="kratos-social-icons">
                         
-                        <li><a href="mailto:957110877@qq.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="mailto:fatalscythe@163.com"><i class="fa fa-envelope"></i></a></li>
                         
                         
                         
@@ -455,16 +650,16 @@ WIFI模组: 安信可NodeMCU...
                     </ul>
                     <ul class="kratos-copyright">
                         <div>
-                            <li>&copy; 2021 无星之夜的咏叹调 版权所有.</li>
+                            <li>&copy; 2021 CyberBrain.top 版权所有.</li>
                             <li>本站已运行<span id="span_dt">Loading...</span></li>
                         </div>
                         <div>
                             <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 无星之夜的咏叹调.</li>
                         </div>
                         <div>
                             <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://coding.net" target="_blank">CODING</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
                         </div>
                         <div>
                             
@@ -488,7 +683,23 @@ WIFI模组: 安信可NodeMCU...
         <script async type="text/javascript" src="/js/snow.min.js"></script>
     </div>
 
-<script async src="/js/candy.min.js"></script>
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
 
 
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -501,6 +712,10 @@ WIFI模组: 安信可NodeMCU...
 
 
     <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
 
 
     </body>
