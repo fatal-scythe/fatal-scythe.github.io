@@ -24,7 +24,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://cyberbrain.top/posts/cd509402/cover.jpg">
 <meta property="article:published_time" content="2021-01-22T16:24:32.000Z">
-<meta property="article:modified_time" content="2021-08-19T06:41:00.778Z">
+<meta property="article:modified_time" content="2021-08-27T01:47:37.758Z">
 <meta property="article:author" content="无星之夜的咏叹调">
 <meta property="article:tag" content="建站">
 <meta name="twitter:card" content="summary">
@@ -102,22 +102,14 @@
                                     
                                 
                                     
-                                        <li><a href="/oldsite/"><i class="fa fa-link"></i>原始网站</a></li>
-                                    
-                                
-                                    
                                         <li>
-                                            <a><i class="fa fa-link"></i>主题链接</a>
+                                            <a><i class="fa fa-link"></i>更多功能</a>
                                             <ul class="sub-menu">
                                                 
                                                     
                                                 
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
-                                                    
-                                                
-                                                    
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                        <li><a href="/oldsite/ucb/ucb.html">X锐格</a></li>
                                                     
                                                 
                                             </ul>
@@ -192,7 +184,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1629355260778"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630028857758"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -207,12 +199,11 @@
 <p>&emsp;&emsp;首先 <code>hexo new &lt;blogName&gt;</code> 新建博客，这步会创建blogName.md文件，接下来编辑这个文件。（尝试着写了这一篇，感觉还行）<br>&emsp;&emsp;然后再把上面剩下的3句挨个运行遍，完事~( <code>hexo clean</code> 看自己需求)  </p>
 <hr>
 <h2 id="5、时隔两个月、移植以前的网站"><a href="#5、时隔两个月、移植以前的网站" class="headerlink" title="5、时隔两个月、移植以前的网站"></a>5、时隔两个月、移植以前的网站</h2><p>&emsp;&emsp;今天是2021.3.14，昨天hcj又问我要X锐格网址，emmmm。说好把以前的网站移植过来，鸽了接近2个月，好吧，今天就搞。<br>&emsp;&emsp;首先将原来的所有东西一股脑放 博客根目录/source/oldsite文件夹内，与_posts同级。并将里面的图片全部压缩（我真的已经注意到背景图片加载很慢的问题了），删除无用的视频、音频，一些基于php和Python的服务也全部删除（但首页的链接保留了！还可以怀念！）<br>&emsp;&emsp;<code>hexo g</code> 是将.md文件按照主题的配置，把js、css渲染进同一个html文件内，所以我以前写好的html、css、js是没有必要进行渲染的。然后打开在博客的根目录下 <strong><em>_config.yml</em></strong> 的配置文件，在配置文件中给skip_render字段添加不渲染的文件夹。</p>
-<pre><code>skip_render:
- - &quot;oldsite/**&quot;</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skip_render:</span><br><span class="line">	- &quot;oldsite&#x2F;**&quot;</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;<strong>友情提醒：原网站入口在首页的最上方“原始网站”</strong>，小伙伴里可能有你认识的小伙伴…</p>
 <hr>
 <h2 id="6、没想到还有6"><a href="#6、没想到还有6" class="headerlink" title="6、没想到还有6"></a>6、没想到还有6</h2><p>&emsp;&emsp;应该没有别的要说了，最后…下面有打赏按钮，大家可以帮忙试一下好不好用哦~ (*^▽^*)</p>
-<h2 id="7、2021年5月17日"><a href="#7、2021年5月17日" class="headerlink" title="7、2021年5月17日"></a>7、2021年5月17日</h2><p>&emsp;&emsp;注册了域名<code>cyberbrain.top</code>，电子脑嘛hhh。<br>&emsp;&emsp;并且把网站部署在了CODING上。  </p>
+<h2 id="7、2021年5月17日"><a href="#7、2021年5月17日" class="headerlink" title="7、2021年5月17日"></a>7、2021年5月17日</h2><p>&emsp;&emsp;注册了域名 <strong><em>cyberbrain.top</em></strong> ，电子脑嘛hhh。<br>&emsp;&emsp;并且把网站部署在了CODING上。  </p>
 
         </div>
         
@@ -304,7 +295,7 @@
                     <a class="tag-none-link" href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag">建站</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-19</span>
+                <span>最后编辑：2021-08-27</span>
                 </div>
             </div>
         </footer>
@@ -377,7 +368,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/">硬件编程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
@@ -386,7 +377,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/ESP32/" style="font-size: 0.67em;">ESP32</a> <a href="/tags/MicroPython/" style="font-size: 0.67em;">MicroPython</a> <a href="/tags/Python/" style="font-size: 0.6em;">Python</a> <a href="/tags/VB/" style="font-size: 0.6em;">VB</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 0.6em;">小工具</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 0.67em;">建站</a> <a href="/tags/%E6%88%90%E5%8A%9F%E5%AE%9E%E7%8E%B0/" style="font-size: 0.67em;">成功实现</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AE%B0/" style="font-size: 0.6em;">更新日记</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.6em;">生活</a> <a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" style="font-size: 0.73em;">电子设计</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.8em;">编程</a> <a href="/tags/%E9%A3%9F%E7%A5%9E%E4%B8%8B%E5%87%A1/" style="font-size: 0.6em;">食神下凡</a>
+        <a href="/tags/ESP32/" style="font-size: 0.65em;">ESP32</a> <a href="/tags/MicroPython/" style="font-size: 0.65em;">MicroPython</a> <a href="/tags/Python/" style="font-size: 0.6em;">Python</a> <a href="/tags/VB/" style="font-size: 0.6em;">VB</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 0.6em;">小工具</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 0.65em;">建站</a> <a href="/tags/%E6%88%90%E5%8A%9F%E5%AE%9E%E7%8E%B0/" style="font-size: 0.7em;">成功实现</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AE%B0/" style="font-size: 0.6em;">更新日记</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.6em;">生活</a> <a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/" style="font-size: 0.75em;">电子设计</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.8em;">编程</a> <a href="/tags/%E9%A3%9F%E7%A5%9E%E4%B8%8B%E5%87%A1/" style="font-size: 0.6em;">食神下凡</a>
       </div>
   </aside>
 
@@ -397,6 +388,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/posts/768a41dahex/"><i class="fa  fa-book"></i> 平平无奇的语音助手（二）——小可同学语音助手</a>
+            
+          
         
           
           
@@ -423,11 +420,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/posts/a637d452/"><i class="fa  fa-book"></i> Keil Studio来了，但还没完全来</a>
             
-          
-        
           
             
           
