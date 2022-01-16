@@ -16,6 +16,8 @@ VB
 MicroPython
 生活
 食神下凡
+FPGA
+Xilinx ZYNQ
 
 categories:
 杂七杂八
