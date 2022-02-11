@@ -26,4 +26,5 @@ categories:
 编程
 硬件编程
 ============================
+{% asset_img 01.jpg 削土豆皮 %}  
  <font color=red><i>简单刺激，动动鼠标即可体验！</i></font>  
