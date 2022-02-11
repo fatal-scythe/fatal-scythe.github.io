@@ -18,6 +18,7 @@ MicroPython
 食神下凡
 FPGA
 Xilinx ZYNQ
+Qt
 
 categories:
 杂七杂八
